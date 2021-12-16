@@ -7,7 +7,8 @@ import demon from "./assets/demon.png";
 import skeleton from "./assets/skeleton.png";
 import wall from "./assets/wall.png";
 import potion from "./assets/potion.png";
-
+import background from "./assets/background.png";
+import ground from "./assets/ground.png";
 import hit from "./assets/hit.mp3";
 import wooosh from "./assets/wooosh.mp3";
 
@@ -16,6 +17,9 @@ kaboom({
   height: window.innerHeight,
   width: window.innerWidth,
 });
+
+loadSprite("background", background);
+loadSprite("ground", ground);
 
 loadSound("hit", hit);
 loadSound("wooosh", wooosh);

@@ -6,6 +6,14 @@ export default function game() {
   // define gravity
   gravity(2400);
 
+  add([
+    sprite("background", {
+      height: height(),
+    }),
+    pos(width(), height() - FLOOR_HEIGHT),
+    origin("botright"),
+  ]);
+
   // add a game object to screen
   const player = add([
     // list of components
@@ -23,15 +31,15 @@ export default function game() {
     player.play(player.super ? "run_super" : "run");
   });
 
-  // floor
   add([
-    rect(width(), FLOOR_HEIGHT),
-    outline(4),
+    sprite("ground", {
+      height: FLOOR_HEIGHT,
+      width: width(),
+    }),
     pos(0, height()),
     origin("botleft"),
     area(),
     solid(),
-    color(127, 200, 255),
   ]);
 
   function jump() {

@@ -8,11 +8,17 @@ import skeleton from "./assets/skeleton.png";
 import wall from "./assets/wall.png";
 import potion from "./assets/potion.png";
 
+import hit from "./assets/hit.mp3";
+import wooosh from "./assets/wooosh.mp3";
+
 // initialize context
 kaboom({
   height: window.innerHeight,
   width: window.innerWidth,
 });
+
+loadSound("hit", hit);
+loadSound("wooosh", wooosh);
 
 // load assets
 loadSprite("player", player, {

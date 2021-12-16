@@ -41,6 +41,7 @@ export default function game() {
     } else {
       player.doubleJump();
     }
+    play("wooosh");
   }
 
   // jump when user press space
@@ -56,7 +57,7 @@ export default function game() {
       initialTreeSpawn = false;
     } else {
       const demon = add([
-        sprite(rand(0, 2) > 1 ? "demon" : 'skeleton', {
+        sprite(rand(0, 2) > 1 ? "demon" : "skeleton", {
           flipX: true,
         }),
         area({ scale: 0.8 }),
@@ -115,6 +116,7 @@ export default function game() {
       return;
     }
     // go to "lose" scene and pass the score
+    play("hit");
     go("lose", score);
   });
 

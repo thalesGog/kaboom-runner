@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaboom JS</title>
+  </head>
+  <body>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyAl-HGy32kli1LTFPz8VwZpQkP9j0a9HeI",
+        authDomain: "kaboom-dino-runner.firebaseapp.com",
+        projectId: "kaboom-dino-runner",
+        storageBucket: "kaboom-dino-runner.appspot.com",
+        messagingSenderId: "968925394360",
+        appId: "1:968925394360:web:83a155b0037bb915100b4d",
+        measurementId: "G-F1QPBPXFH4",
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>
